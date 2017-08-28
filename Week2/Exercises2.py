@@ -125,9 +125,6 @@ def average1(numlis):
     total = tally / ct
     print("The average of the list is: ",total)
         
-        
-
-
 
 
 
@@ -172,6 +169,15 @@ Solution:
 """
 #%%
 
+letter_list = ['a', 'b', 'c']
+cap_list = ['A', 'B', 'C', 'D']
+misc_list = ['ball', 3.14, -50, 'university', "course"]
+
+def print_list(lis):
+    for plist in lis:
+        print(plist)
+        
+        
 
 
 #%%
@@ -289,7 +295,14 @@ What is the population of the state in the second element?
 Solution:
 """
 #%%
+newEngland = [["Massachusetts",6692824],["Connecticut",3596080],
+              ["Maine",1328302],["New Hampshire",1323459],
+              ["Rhode Island",1051511],["Vermont",626630]]
 
+def state_report(lis):
+    print("Population",'\t',"State")
+    for states in lis:
+        print(states[1],'\t',states[0])
 
 
 
@@ -397,35 +410,17 @@ numlis2 = [4,6,8,12,2,7,19]     # test on a second list to be sure
 Solution Starter:
 """
 #%%
+numlis = [65, 44, 3, 56, 48, 74, 7, 97, 95, 42]  # test on this list
+numlis2 = [4,6,8,12,2,7,19]     # test on a second list to be sure
+
 def average(nlis):
-    pass  # delete this and enter your code starting here
+    total = 0
+    for num_lis in range(0,len(nlis)):
+        total = total + nlis[num_lis]
+        print(nlis[num_lis],end=' ')
+    print()
+    print("The average is",total/len(nlis))
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #%%
@@ -497,28 +492,16 @@ adverbs=["handily","sweetly","sourly","gingerly","forcefully","meekly"]
 articles=["a","the","that","this"]
 
 def simple_poem():
-    article = random.choice(articles)    
-    noun = random.choice(nouns)
-    verb = random.choice(verbs)
-    adverb = random.choice(adverbs)
-    
-    our_sentence = article + " " + noun + " " + verb + " " + adverb + "."
-    our_sentence = our_sentence.capitalize()
-    
-    print(our_sentence)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    num = 1
+    while num <5:
+        article = random.choice(articles)    
+        noun = random.choice(nouns)
+        verb = random.choice(verbs)
+        adverb = random.choice(adverbs)
+        
+        print(adverb.capitalize(), verb, article, noun, sep = " ")
+        num = num + 1
+   
     
 #%%
 """
