@@ -27,11 +27,11 @@ does all of the following, each on a separate line:
 """  
 #%%      
 def problem2_1():
-    pass # replace this pass (a do-nothing) statement with your code
-
-
-
-
+    lis = list(range(20,30))
+    print(lis[3])
+    print(lis)
+    for item in range(0,len(lis)):
+        print(lis[item],end=" ")
 
 
 
@@ -70,14 +70,17 @@ alist = ["a","e","i","o","u","y"]
 blist = ["alpha", "beta", "gamma", "delta", "epsilon", "eta", "theta"] 
 
 def problem2_2(my_list):
-    pass # replace this pass (a do-nothing) statement with your code
-
-
-
-
-
-
-
+    print(my_list)
+    print(my_list[0])
+    lislen = int(len(my_list))-1
+    print(my_list[lislen])
+    print(my_list[3:5:1])
+    print(my_list[:3])
+    print(my_list[3:])
+    print(len(my_list))
+    my_list.append("z")
+    print(my_list)
+    
 
 
 
@@ -127,15 +130,19 @@ Connecticut has 11 letters.
 The function is started for you.  The grader will not use the list newEngland
 so don't use the variable newEngland inside your function.
 """
-#%%
+"""
 newEngland = ["Maine","New Hampshire","Vermont", "Rhode Island", 
 "Massachusetts","Connecticut"]
-
-def problem2_3(ne):
-    pass # replace this pass (a do-nothing) statement with your code
+"""
+#%%
+def problem2_3(st):
+    ind = 0
+    for state in st:
+        print(st[ind],"has",len(st[ind]),"letters.",end=" ")
+        print()
+        ind = ind + 1
 
     
-#%%
 """
 Problem 2_4:
 random.random() generates pseudo-random real numbers between 0 and 1. But what
@@ -152,8 +159,13 @@ import random
 
 def problem2_4():
     """ Make a list of 10 random reals between 30 and 35 """
-    random.seed()
-    pass # replace this pass (a do-nothing) statement with your code
+    random.seed(70)
+    num1 = []
+    #num1 = [random.random() * 5 + 30 for _ in range(10)] # same as loop below
+    for num in range(0,10):
+        num1.append(random.random() * 5 + 30)
+    print(num1)
+
 
 #%%
 """
@@ -207,7 +219,13 @@ def problem2_5():
     # Setting the seed makes the random numbers always the same
     # This is to make the auto-grader's job easier.
     random.seed(171)  # don't remove when you submit for grading
-    pass # replace this pass (a do-nothing) statement with your code
+    #die = [random.randint(1,6) for _ in range(10)]
+    pip = []
+    for val in range(10):
+        #die = random.randint(1,6)
+        pip.append(random.randint(1,6))
+        print(pip[val])
+        
 
 #%%
 """
@@ -226,8 +244,9 @@ def problem2_6():
     # Setting the seed makes the random numbers always the same
     # This is to make the auto-grader's job easier.
     random.seed(431)  # don't remove when you submit for grading
-    pass # replace this pass (a do-nothing) statement with your code
-
+    for val in range(100):
+        tot = random.randint(1,6) + random.randint(1,6)
+        print(tot)
    
 #%%
 """
@@ -288,7 +307,24 @@ Area of a triangle with sides 9.0 12.0 15.0 is 54.0
 
 def problem2_7():
     """ computes area of triangle using Heron's formula. """
-    pass # replace this pass (a do-nothing) statement with your code
+    side1 = float(input("Enter length of side one: "))
+    if side1 <= 0.0:
+        print("Value must be 1 or more")
+        exit()
+    side2 = float(input("Enter length of side two: "))
+    if side2 <= 0.0:
+        print("Value must be 1 or more")
+        exit()
+    side3 = float(input("Enter length of side three: "))
+    if side3 <= 0.0:
+        print("Value must be 1 or more")
+        exit()
+    s = float((side1 + side2 + side3)/2)
+    x = s * (s - side1) * (s - side2) * (s - side3)
+    area = x**.5
+    print("Area of a triangle with sides",side1,side2,side3,"is",area)
+    
+    
     
 #%%
 """ 
@@ -310,7 +346,12 @@ hourly_temp = [40.0, 39.0, 37.0, 34.0, 33.0, 34.0, 36.0, 37.0, 38.0, 39.0, \
                36.0, 35.0, 33.0, 32.0]
 #%%
 def problem2_8(temp_list):
-    pass # replace this pass (a do-nothing) statement with your code
+    average = sum(temp_list)/len(temp_list)
+    print("Average:",average)
+    high = max(temp_list)
+    print("High:",high)
+    low = min(temp_list)
+    print("Low:",low)
         
     
 #%%
