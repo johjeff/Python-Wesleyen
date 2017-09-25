@@ -198,16 +198,16 @@ agedict = {"George":"17","Sally":"19",
 # Which work (you might copy each into IPython and see whether it works)?
 namelist[1]   # yes or no
 mytuple[1]    # yes or no
-agedict[1]    # yes or no      
+agedict[1]    # yes or no - No     
 #%%
 # Which work?
 namelist.append("Rod")   # yes or no
-mytuple.append("Rod")    # yes or no
-agedict.append("Rod")    # yes or no
+mytuple.append("Rod")    # yes or no - No
+agedict.append("Rod")    # yes or no - No
 #%%
 # Which work?
 namelist[1]="Rod"    # yes or no
-mytuple[1] = "Rod"   # yes or no
+mytuple[1] = "Rod"   # yes or no - No
 agedict["Rod"]="23"  # yes or no
           
 #%%
@@ -293,9 +293,17 @@ outline of what needs to be done is given as comments.
 #%% 
 def write_to_file(filename, myname, myage, major):
     # open file first
+    # not necessary - infile = open(filename)
+    outfile = open(filename,'w')
+    myage = str(myage)
+    
     outfile.write("My name is "+ myname + " \n")
     # write out the age and major in two lines
+    outfile.write("My age is "+ myage + " \n")
+    outfile.write("I am majoring in "+ major + " \n")
     # close the file
+    # not necessary - infile.close()
+    outfile.close()
 
     
 #%%

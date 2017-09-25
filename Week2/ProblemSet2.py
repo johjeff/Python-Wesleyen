@@ -138,8 +138,7 @@ newEngland = ["Maine","New Hampshire","Vermont", "Rhode Island",
 def problem2_3(st):
     ind = 0
     for state in st:
-        print(st[ind],"has",len(st[ind]),"letters.",end=" ")
-        print()
+        print(st[ind],"has",len(st[ind]),"letters.")
         ind = ind + 1
 
     

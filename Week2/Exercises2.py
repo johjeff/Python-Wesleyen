@@ -1,4 +1,4 @@
-# - Exercises2.py *- coding: utf-8 -*-
+.# - Exercises2.py *- coding: utf-8 -*-
 """
 Python has lists. The empty list is []. The following is a list of one
 item ["a"] and so is [3]. Here is a list with 3 items ["ball",3.14,-2]. Let's
